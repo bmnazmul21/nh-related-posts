@@ -4,7 +4,6 @@ Plugin Name: NH Related Posts
 Description: Display related posts automatically at the end of single posts based on categories.
 Version: 1.0
 Author: Nazmul Hasan
-Author URI: https://bmnazmul21.github.io/portfolio/
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: nh-related-posts
