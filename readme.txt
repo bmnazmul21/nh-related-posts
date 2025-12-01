@@ -23,7 +23,7 @@ Post Relation displays related posts automatically at the end of single posts ba
 Yes, you can edit 'posts_per_page' in 'includes/post.php'.
 
 = Can I change the layout? =
-Yes, edit the CSS in 'style.css'.
+Yes, edit the CSS in style.css.
 
 == Changelog ==
 = 1.0 =
