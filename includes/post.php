@@ -22,7 +22,8 @@ class NHREPO_Post {
                 // Fetch 4 posts to account for filtering out the current post.
                 $args = array(
                     'category__in'   => $categories,
-                    'posts_per_page' => 4, // Fetch one extra to ensure we get 3 after filtering.
+                    'posts_per_page' => 3, // Fetch one extra to ensure we get 3 after filtering.
+                    'post__not_in'   => array( $post->ID ),
                 );
 
                 $related_post = new WP_Query( $args );
@@ -37,12 +38,6 @@ class NHREPO_Post {
                             $count = 0;
                             while ( $related_post->have_posts() && $count < 3 ) : 
                                 $related_post->the_post(); 
-                                
-                                // Skip the current post.
-                                if ( get_the_ID() === $post->ID ) {
-                                    continue;
-                                }
-                                $count++;
                             ?>
                                 <li>
                                     <a href="<?php echo esc_url( get_permalink() ); ?>">
